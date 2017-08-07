@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+    <html>
+        <head>
+            <title>Austin Porter</title>
+            <style>
+                h1 {
+                    font-size: 50px;
+                    text-align: center;
+                }
+                h2.question {
+                    font-size: 30px;
+                    color: #2489db;
+                }
+                img.profile {
+                    width: 200px;
+                    height: 200px;
+                    display: block;
+                    margin: auto;
+                }
+                .answer {
+                    font-size: 20px;
+                }
+                a {
+                    color: blue;
+                    font-size: 25px;
+                }
+            </style>
+        </head>
+        
+        <body>
+            <h1>Austin Porter | CodeHS Portfolio</h1>
+            <img class="profile" src="https://cdn4.iconfinder.com/data/icons/text-editor/154/user-login-access-document-edit-text-512.png" alt="Profile Picture">
+            <hr>
+            <h2 class="question">What do you like to do?</h2>
+            <ul class="answer">
+                <li>I like to play competitive video games.</li>
+                <li>I like to edit videos and create youtube content.</li>
+                <li>I like to sing and act in musical theatre.</li>
+                <li>I like to program and create code for certain programs.</li>
+                <li>I like to watch youtube and analyze movies.</li>
+            </ul>
+            <h2 class="question">What would you like to learn in AP Computer Science Principles(Software Engineering)?</h2>
+            <p class="answer">I would like to learn how to implement other programming languages into html to give the webpage a more interactive user interface.</p>
+            <a href="https://codehs.com/editor/html/158794/438971/index.html">My Favorite Webpage So Far</a>
+        </body>
+    </html>
