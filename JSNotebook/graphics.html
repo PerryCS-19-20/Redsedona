@@ -33,6 +33,23 @@
         var width_2 = width/2;
         var height_2 = height/2;
         
+        function space(){
+            var spaceBack = new Rect(0,0,width,height);
+            spaceBack.setColor("black");
+            canvas.add(spaceBack);
+            
+            var moon = new Circle(width_2+65, 40, 10);
+            moon.setColor("#595959");
+            canvas.add(moon);
+            
+            canvas.draw();
+        }
+        function astronaut(){
+            
+        }
+        
+        space();
+        astronaut();
         
     }
 </script>
