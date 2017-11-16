@@ -14,7 +14,7 @@
     </div>
     
     <!-- Describe what this notebook page is showing -->
-    <p><em>What I learned today...</em></p>
+    <p><em>I learned how to draw pictures using simple shapes in Javascript!</em></p>
     
     <!-- Below is the code that will run -->
     <div>
@@ -32,20 +32,45 @@
         var height = canvas.getHeight();
         var width_2 = width/2;
         var height_2 = height/2;
+        var width_4 = width/4;
+        var height_4 = height/4;
+        
+        var headR = 250;
+        var headD = headR*2;
+        
+        var bodyW = 800;
+        var bodyW_2 = bodyW/2;
         
         function space(){
             var spaceBack = new Rect(0,0,width,height);
             spaceBack.setColor("black");
             canvas.add(spaceBack);
             
-            var moon = new Circle(width_2+65, 40, 10);
-            moon.setColor("#595959");
+            var moon = new Circle(width_4*3, height_4, 100);
+            moon.setColor("red");
             canvas.add(moon);
             
             canvas.draw();
         }
         function astronaut(){
             
+            var body = new Rect(width_2-bodyW_2,height_2+150,bodyW,450);
+            body.setColor("#b3b3b3");
+            canvas.add(body);
+            
+            var suit = new Circle(width_2,height+50,400);
+            suit.setColor("white");
+            canvas.add(suit);
+            
+            var helmet = new Circle(width_2,(height-headD)+50,headR+60);
+            helmet.setColor("white");
+            canvas.add(helmet);
+            
+            var head = new Circle(width_2,(height-headD)+50,headR);
+            head.setColor("#262626");
+            canvas.add(head);
+            
+            canvas.draw();
         }
         
         space();
