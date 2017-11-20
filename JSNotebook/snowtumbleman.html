@@ -1,0 +1,91 @@
+<!doctype html>
+<html>
+  <head>      
+    <link href="https://perryma.tk/jsnotebook/notebook.css" rel="stylesheet" type="text/css" />    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>My JavaScript Notebook</title>
+  </head>
+
+  <body>
+    <div class="header">
+        <!-- Title for this notebook page -->
+        <h1>My JavaScript Notebook: <em>Graphics Objects</em></h1>
+        <div class="menubar"></div>
+    </div>
+    
+    <!-- Describe what this notebook page is showing -->
+    <p><em>I learned how to use if and else statements together the create situational code which would only occur when a user inputs a certain condition. In this case, I use it to make a condition to see if it is winter and if it is then draw a snowman but if it is not then it will draw a tumbleweed man.</em></p>
+    
+    <!-- Below is the code that will run -->
+    <div>
+      <div class="title"> <!-- title bar for the javascript code -->
+        <button onclick="start();">Run</button> <!-- Run button that calls start function when pressed -->
+        Hello World <!-- Program title -->
+      </div>
+
+<script class="code">
+
+    function start(){
+        var isWinter = readBoolean("Is it Winter right now?");
+        var colorMan;
+        var colorSky;
+        
+        if(isWinter){
+          colorMan = "white";
+          colorSky = "blue";
+        }else{
+          colorMan = "#deaa88";
+          colorSky = "#b3d9ff";
+        }
+        canvas.prepare();
+          
+        var canvW = canvas.getWidth();
+        var canvH = canvas.getHeight();
+        var canvW2 = canvW/2;
+        var canvH2 = canvH/2;
+          
+        var bigCircR = ((canvH/3)/2);
+        var bigCircD = bigCircR*2;
+        var bigCirc1_3 = (bigCircD/3);
+          
+        var medCircR = ((bigCirc1_3*2)/2);
+        var medCircD = medCircR*2;
+        var medCirc1_3 = (medCircD/3);
+          
+        var smallCircR = ((medCirc1_3*2)/2);
+        var smallCircD = smallCircR*2;
+          
+        var posBigCircY = canvH-bigCircR;
+        var posMedCircY = ((canvH-bigCircD)-medCircR);
+        var posSmallCircY = ((canvH-bigCircD)-medCircD)-smallCircR;
+          
+        var background = new Rect(0,0,canvW,canvH);
+        background.setColor(colorSky);
+        canvas.add(background);
+          
+        var bigCirc = new Circle(canvW2,posBigCircY,bigCircR);
+        bigCirc.setColor(colorMan);
+        canvas.add(bigCirc);
+          
+        var medCirc = new Circle(canvW2,posMedCircY,medCircR);
+        medCirc.setColor(colorMan);
+        canvas.add(medCirc);
+          
+        var smallCirc = new Circle(canvW2,posSmallCircY,smallCircR);
+        smallCirc.setColor(colorMan);
+        canvas.add(smallCirc);
+          
+        println("Big Circle- D: "+bigCircD+" R: "+bigCircR);
+        println("Medium Circle- D: "+medCircD+" R: "+medCircR);
+        println("Small Circle- D: "+smallCircD+" R: "+smallCircR);
+          
+        canvas.draw();
+    }
+
+</script>
+      <canvas id="Drawing"></canvas> <!-- Graphics output canvas -->
+      <textarea id="Console"></textarea> <!-- Text output console -->
+    </div>
+    <script src="https://perryma.tk/jsnotebook/notebook.js"></script>    
+  </body>
+</html>
