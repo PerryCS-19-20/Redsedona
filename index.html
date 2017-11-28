@@ -3,49 +3,131 @@
         <head>
             <title>Austin Porter</title>
             <style>
+                body{
+                    background-color:white;
+                }
                 h1 {
                     font-size: 50px;
                     text-align: center;
                 }
+                .web-title{
+                    font-size: 60px;
+                    padding-top:30px;
+                    margin-top:0px;
+                    font-family:Arial, Helvetica, sans-serif;
+                }
                 h2.question {
-                    font-size: 30px;
-                    color: #2489db;
+                    font-size: 25px;
+                    color: red;
                 }
                 img.profile {
-                    width: 200px;
-                    height: 200px;
+                    width: 100%;
+                    height: 100px;
                     display: block;
-                    margin: auto;
+                    margin-top: 0px;
+                    padding-bottom:20px;
                 }
                 .answer {
-                    font-size: 20px;
+                    font-size: 18px;
                 }
-                a {
-                    color: blue;
-                    font-size: 25px;
+                .intro{
+                    color: white;
+                    background-color:black;
+                }
+                .link{
+                    font-size: 20px;
+                    text-align: center;
+                    background-color: black;
+                    
+                }
+                a{
+                    color: red;
+                    padding:15px;
+                }
+                .link:active{
+                    color: #ff6666;
+                }
+                .link-title{
+                    font-size: 45px;
+                    background-color: black;
+                    color:whitesmoke;
+                    padding-top: 30px;
+                    padding-bottom: 60px;
+                    margin-bottom: 0px;
+                    font-family:Arial, Helvetica, sans-serif;
+                }
+                .link-div{
+                    padding-top:10px;
+                    padding-bottom:30px;
+                    margin:0px;
+                }
+                .q-and-a{
+                   padding-top:0px;
+                   padding-bottom:0px;
+                }
+                .questions{
+                    text-align: left;
+                    font-size: 45px;
+                }
+                .notebook{
+                    margin-top:0px;
+                    margin-bottom:0px;
+                    width:100%;
+                    background-color:#333333;
+                    padding:30px;
+                    height:150px;
+                    
+                }
+                .notebook-title{
+                    font-size:40px;
+                    text-align:center;
+                    color:black;
+                    margin-top:0px;
+                    margin-bottom:0px;
+                    padding-top:20px;
+                    padding-bottom:20px;
+                    background-color:white;
+                    width:200px;
+                    box-shadow: 10px 10px 5px black;
+                    display:block;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                .notebook a{
+                    text-decoration: none;
                 }
             </style>
         </head>
         
         <body>
-            <h1>Austin Porter | CodeHS Portfolio</h1>
-            <img class="profile" src="https://cdn4.iconfinder.com/data/icons/text-editor/154/user-login-access-document-edit-text-512.png" alt="Profile Picture">
-            <hr>
-            <h2 class="question">What do you like to do?</h2>
-            <ul class="answer">
-                <li>I like to play competitive video games.</li>
-                <li>I like to edit videos and create youtube content.</li>
-                <li>I like to sing and act in musical theatre.</li>
-                <li>I like to program and create code for certain programs.</li>
-                <li>I like to watch youtube and analyze movies.</li>
-            </ul>
-            <h2 class="question">What would you like to learn in AP Computer Science Principles(Software Engineering)?</h2>
-            <p class="answer">I would like to learn how to implement other programming languages into html to give the webpage a more interactive user interface.</p>
-            <hr>
-            <h1>Things I've worked on in the past:</h1><br>
-            <a href="https://codehs.com/editor/html/158794/438971/index.html">My Favorite Webpage So Far</a><br><br>
-            <a href="https://perryma.tk/Redsedona/eclipse">Eclipse Website</a><br><br>
-            <a href="https://codehs.com/share/lMiQwpedZl1OnDULHOWq">Creating a pirate flag using Karel</a><br><br>
-            <a href="/Redsedona/JSNotebook/index.html">JS Notebook</a><br><br>
+            <div class="intro">
+                <h1 class="web-title">Austin Porter | CodeHS Portfolio</h1>
+                <img class="profile" src="data:image/jpeg;base64,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" alt="Banner">
+            </div>
+            <div class="q-and-a">
+                <h1 class="questions">Questions and Answers</h1>
+                <hr>
+                <h2 class="question">What do you like to do?</h2>
+                <ul class="answer">
+                    <li>I like to program and create code for certain programs.</li>
+                    <li>I like to edit videos and create youtube content.</li>
+                    <li>I like to sing and act in musical theatre.</li>
+                    <li>I like to play competitive video games.</li>
+                    <li>I like to watch youtube and analyze movies.</li>
+                </ul>
+                <h2 class="question">What would you like to learn in AP Computer Science Principles(Software Engineering)?</h2>
+                <p class="answer">I would like to learn how to implement other programming languages into html to give the webpage a more interactive user interface.</p>
+            </div>
+            <div class="link">
+                <h1 class="link-title">Things I've worked on in the past:</h1>
+                <div class="link-div"><a href="https://codehs.com/editor/html/158794/438971/index.html">My Favorite Webpage So Far</a></div><br>
+                <div class="link-div"><a href="https://perryma.tk/Redsedona/eclipse">Eclipse Website</a></div><br>
+                <div class="link-div"><a href="https://codehs.com/share/lMiQwpedZl1OnDULHOWq">Creating a pirate flag using Karel</a></div><br>
+            </div>
+            <div class="notebook">
+                <a href="/Redsedona/JSNotebook/index.html">
+                <h1 class="notebook-title">Javascript Notebook</h1>
+                </a>
+            </div>
         </body>
     </html>
