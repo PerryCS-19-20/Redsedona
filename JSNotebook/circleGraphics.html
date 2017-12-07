@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+  <head>      
+    <link href="https://perryma.tk/jsnotebook/notebook.css" rel="stylesheet" type="text/css" />    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>My JavaScript Notebook</title>
+  </head>
+
+  <body>
+    <div class="header">
+        <!-- Title for this notebook page -->
+        <h1>My JavaScript Notebook: <em>Graphics Objects</em></h1>
+        <div class="menubar"></div>
+    </div>
+    
+    <!-- Describe what this notebook page is showing -->
+    <p><em>I learned how to properly use for loops and variables in a canvas to create
+        a repeating and randomized colorization process that takes in user input to
+        adjust the canvas and shrink it down as well as multiply by the amount that
+        the user puts in to give the proper amount of circles and rows distributed
+        evenly in the equidistant square canvas.</em></p>
+    
+    <!-- Below is the code that will run -->
+    <div>
+      <div class="title"> <!-- title bar for the javascript code -->
+        <button onclick="start();">Run</button> <!-- Run button that calls start function when pressed -->
+        tilingCircles <!-- Program title -->
+      </div>
+
+<script class="code">
+    function start(){
+        var amount = readInt("How many circles in the row?");
+        
+        canvas.prepare();
+        
+        var width = canvas.getWidth();
+        var height = canvas.getHeight();
+        
+        var circleR = (width/amount)/2;
+        
+        var rowT = height/(circleR*2);
+        
+        for(var c = 0; c < rowT; c++){
+            var rowNum = c;
+            for(var r = 0; r < amount; r++){
+                var redRandom = Math.random()*256;
+                var red = Math.floor(redRandom);
+
+                var greenRandom = Math.random()*256;
+                var green = Math.floor(greenRandom);
+
+                var blueRandom = Math.random()*256;
+                var blue = Math.floor(blueRandom);
+
+
+                var x = ((width/amount)*r)+circleR;
+                var y = ((circleR*2)*rowNum)+circleR;
+
+                var circle = new Circle(x,y,circleR);
+                circle.setColor(rgb(red,green,blue));
+
+                canvas.add(circle);
+            }
+        }
+        canvas.draw();
+    }
+</script>
+      <canvas id="Drawing"></canvas> <!-- Graphics output canvas -->
+      <textarea id="Console"></textarea> <!-- Text output console -->
+    </div>
+    <script src="https://perryma.tk/jsnotebook/notebook.js"></script>    
+  </body>
+</html>
