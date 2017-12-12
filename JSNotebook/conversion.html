@@ -1,0 +1,58 @@
+<!doctype html>
+<html>
+  <head>      
+    <link href="https://perryma.tk/jsnotebook/notebook.css" rel="stylesheet" type="text/css" />    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://perryma.tk/jsnotebook/notebook.js"></script>
+    <title>My JavaScript Notebook</title>
+  </head>
+
+  <body>
+    <div class="header">
+        <!-- Title for this notebook page -->
+        <h1>My JavaScript Notebook: <em>Variables and Math</em></h1>
+        <div class="menubar"></div>
+    </div>
+    
+    <!-- Describe what this notebook page is showing -->
+    <p><em>What I learned today...</em></p>
+    
+    <!-- Below is the code that will run -->
+    <div>
+      <div class="title"> <!-- title bar for the javascript code -->
+        <button onclick="start();">Run</button> <!-- Run button that calls start function when pressed -->
+        Hello World <!-- Program title -->
+      </div>
+
+<script class="code">
+function start(){
+    var a = readInt("Distance in miles?");
+    println("Distance in miles: "+a);
+    milesToKilometers(a);
+}
+function milesToKilometers(x){
+    var a = x*1.60934;
+    println("Distance in kilometers: "+a);
+    kilometersToMeters(a);
+}
+function kilometersToMeters(x){
+    var a = x*1000;
+    println("Distance in meters: "+a);
+    metersToFeet(a);
+}
+function metersToFeet(x){
+    var a = x*3.28084;
+    println("Distance in feet: "+a);
+    feetToInches(a);
+}
+function feetToInches(x){
+    var a = x*12;
+    println("Distance in inches: "+a);
+}
+</script>
+      <canvas id="Drawing"></canvas> <!-- Graphics output canvas -->
+      <textarea id="Console"></textarea> <!-- Text output console -->
+    </div>
+    
+  </body>
+</html>
