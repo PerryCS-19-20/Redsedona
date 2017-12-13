@@ -15,7 +15,9 @@
     </div>
     
     <!-- Describe what this notebook page is showing -->
-    <p><em>What I learned today...</em></p>
+    <p><em>I learned how to create functions to better organize code as well as returning variables to a command after figuring out its value in the
+        function. (I was a bit confused on the constructions so I created code that ran in a specific order and not separate functions because
+        that's what the instructions sounded like on how you were supposed to do it..)</em></p>
     
     <!-- Below is the code that will run -->
     <div>
@@ -48,6 +50,12 @@ function metersToFeet(x){
 function feetToInches(x){
     var a = x*12;
     println("Distance in inches: "+a);
+    inchesToMillimeters(a);
+}
+function inchesToMillimeters(x){
+    var a = x*25.4;
+    println("Distance in millimeters: "+a);
+    
 }
 </script>
       <canvas id="Drawing"></canvas> <!-- Graphics output canvas -->
